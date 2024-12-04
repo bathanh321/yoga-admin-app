@@ -1,0 +1,116 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Day Of Week"/>
+        <Spinner
+            android:id="@+id/spinnerDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Start Time"/>
+
+        <TimePicker
+            android:id="@+id/timePickerStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"/> <!-- Chế độ chọn thời gian -->
+
+        <!-- Chọn thời gian kết thúc -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select End Time"/>
+
+        <TimePicker
+            android:id="@+id/timePickerEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"/> <!-- Chế độ chọn thời gian -->
+
+        <!-- Nhập giá cho mỗi lớp -->
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price per class"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Radio group cho loại lớp học -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Class Type"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupClassType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioFlowYoga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flow Yoga"/>
+
+            <RadioButton
+                android:id="@+id/radioAerialYoga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aerial Yoga"/>
+
+            <RadioButton
+                android:id="@+id/radioFamilyYoga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Family Yoga"/>
+        </RadioGroup>
+
+        <!-- Nhập địa điểm -->
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/sky_600"
+                android:text="Save"/>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/neutral_900"
+                android:text="Back"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
